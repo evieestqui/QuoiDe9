@@ -1,0 +1,178 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+<div class="top-features">
+    <div class="location-setting">
+      <div class="location-dropdown">
+        <span class="location-icon">📍</span>
+        <select name="location" id="location">
+          <option value="">16 Via Gaudelet</option>
+          <option value="custom">Set Custom Location</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="search-filter">
+      <div class="search-bar">
+        <input type="text" placeholder="Food Restrictions, Preferences">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <button class="filter-button">
+          <i class="fa-solid fa-filter"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="mode-toggle">
+      <button class="mode-button active">
+        <i class="fa-solid fa-utensils"></i>
+      </button>
+      <button class="mode-button">
+        <i class="fa-solid fa-mountain-sun"></i>
+      </button>
+    </div>
+  </div>
+
+  <style>
+    .top-features {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 30px 30px 0 0;
+    }
+
+    .location-dropdown {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background-color: #f5f5f5;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      background-color: #f5f5f5;
+      border-radius: 20px;
+      width: 300px;
+    }
+
+    .search-bar input {
+      border: none;
+      background: none;
+      outline: none;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .filter-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .mode-toggle {
+      display: flex;
+      gap: 8px;
+      background-color: #f5f5f5;
+      padding: 4px;
+      border-radius: 20px;
+    }
+
+    .mode-button {
+      background: none;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 16px;
+      cursor: pointer;
+    }
+
+    .mode-button.active {
+      background-color: #000;
+      color: white;
+    }
+  </style>
+
+<div class="roulette-container">
+  <div class="wheel">
+    <img src="wheel.png" alt="Roulette Wheel" id="rouletteWheel">
+  </div>
+
+  <h2 class="category-title">Restaurant</h2>
+  <h1 class="description">Start Roulette to<br>Discover Restaurant</h1>
+  <p class="sub-description">Once roulette stops,<br>a random restaurant will be displayed for you.</p>
+
+  <button class="start-button" onclick="startRoulette()">Start Roulette</button>
+</div>
+
+<script>
+  function startRoulette() {
+    const wheel = document.getElementById('rouletteWheel');
+    const randomRotation = 1800 + Math.random() * 360; // Spin at least 5 times
+    wheel.style.transform = `rotate(${randomRotation}deg)`;
+
+    // Add logic here to display random restaurant after spin
+    setTimeout(() => {
+      // Display restaurant logic
+    }, 3000);
+  }
+</script>
+
+<style>
+    .roulette-container {
+      text-align: center;
+      padding: 40px;
+      background-color: #f0ffd4;
+      border-radius: 0 0 30px 30px;
+    }
+
+    .wheel {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 20px;
+      position: relative;
+    }
+
+    .wheel img {
+      width: 100%;
+      height: 100%;
+      transition: transform 3s cubic-bezier(0.17, 0.67, 0.12, 0.99);
+    }
+
+    .category-title {
+      color: #00b894;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 32px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .sub-description {
+      font-size: 18px;
+      color: #888;
+      margin-bottom: 30px;
+    }
+
+    .start-button {
+      background-color: #000;
+      color: white;
+      padding: 15px 40px;
+      border-radius: 25px;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .start-button:hover {
+      background-color: #333;
+    }
+  </style>
