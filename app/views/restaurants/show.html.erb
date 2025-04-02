@@ -1,2 +1,49 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<div class="container mx-auto px-4 py-6">
+  <div class="bg-white rounded-lg shadow-md overflow-hidden">
+    <div class="relative">
+
+      <%= cl_image_tag @restaurant.photo.key, class: "w-full h-48 object-cover" %>
+      <div class="absolute bottom-0 left-0 right-0 bg-red-600 text-white p-2">
+        <h2 class="text-xl font-bold"><%= @restaurant.name %></h2>
+      </div>
+    </div>
+
+    <div class="p-4">
+      <div class="flex items-center mb-2">
+        <div class="text-yellow-500 mr-1">★</div>
+        <span class="font-semibold mr-2"><%= @restaurant.rating %></span>
+        <span class="text-gray-600">(10 reviews)</span>
+        <span class="mx-2">•</span>
+        <span class="text-gray-600"><%= 4 %> min walk</span>
+      </div>
+
+      <div class="flex flex-wrap gap-2 mb-4">
+        <% @restaurant.food_preferences.each do |preference| %>
+          <span class="text-gray-600"><%= preference %></span>
+          <% unless preference == @restaurant.food_preferences.last %>
+            <span>•</span>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="flex flex-wrap gap-2 mb-4">
+        <% @restaurant.food_restrictions.each do |restriction| %>
+          <span class="text-gray-600"><%= restriction %></span>
+          <% unless restriction == @restaurant.food_restrictions.last %>
+            <span>•</span>
+          <% end %>
+        <% end %>
+      </div>
+
+      <a href="#" class="block w-full bg-black text-white text-center py-3 rounded-md font-medium">
+        See Restaurant
+      </a>
+    </div>
+  </div>
+
+  <div class="mt-8">
+    <h3 class="text-lg font-semibold mb-4">Other Recommended Restaurants</h3>
+
+
+  </div>
+</div>

@@ -3,6 +3,27 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
   end
 
+  def search
+    query = Restaurant.all
+
+    if params[:food_preferences].present?
+      query = query.where("food_preferences @> ARRAY[?]::varchar[]", params[:food_preferences])
+    end
+
+    if params[:food_restrictions].present?
+      query = query.where("food_restrictions @> ARRAY[?]::varchar[]", params[:food_restrictions])
+    end
+
+    # Using RANDOM() with a seed based on current timestamp to ensure different results
+    @restaurant = query.order(Arel.sql("RANDOM() * extract(epoch from now())::integer")).first
+
+    if @restaurant
+      redirect_to restaurant_path(@restaurant)
+    else
+      redirect_to restaurants_path, notice: "No matching restaurants found"
+    end
+  end
+
   def show
     @restaurant = Restaurant.find(params[:id])
   end
@@ -17,6 +38,17 @@ class RestaurantsController < ApplicationController
       redirect_to @restaurant, notice: "Restaurant successfully added!"
     else
       render :new
+    end
+  end
+
+  def random
+    cuisine = params[:cuisine]
+    @restaurant = Restaurant.where("? = ANY (categories)", cuisine)
+                           .order("RANDOM()")
+                           .first
+
+    respond_to do |format|
+      format.json { render json: { id: @restaurant.id } }
     end
   end
 

@@ -42,26 +42,15 @@ paris_addresses = [
   "23 Rue Dauphine, 75006 Paris"
 ]
 
-food_preferences = [
-  "Fast Food", "Italian", "Chinese", "Japanese", "Kebab", "Pizza", "Pasta", "Thai", "Burger",
-  "Sushi", "Vietnamese", "Indian", "Mexican", "BBQ", "Greek", "French", "Lebanese", "Brunch",
-  "Breakfast", "Desserts", "Bubble Tea", "Coffee", "Tacos", "Vegan", "Vegetarian", "Organic",
-  "High-Protein", "High-Fiber"
-]
 
-food_restrictions = [
-  "Halal", "Hindu Vegetarian", "Kosher", "Gluten-Free", "Lactose Free", "Dairy-Free",
-  "Nut-Free", "Egg-Free", "Shellfish-Free", "Coriander-Free", "Diabetic-Friendly",
-  "Low-Carb", "Low-Fat"
-]
 
 5.times do |i|
   restaurant = Restaurant.create!(
     name: Faker::Restaurant.name,
     address: paris_addresses[i],
     rating: rand(1..5),
-    food_preferences: food_preferences.sample(rand(2..5)),
-    food_restrictions: food_restrictions.sample(rand(1..3)),
+    food_preferences: FOOD_PREFERENCES.sample(rand(2..5)),
+    food_restrictions: FOOD_RESTRICTIONS.sample(rand(1..3)),
     restaurant_owner: [john, jane].sample
   )
 

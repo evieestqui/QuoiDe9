@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["canvas"]
+  static targets = ["canvas", "form"]
 
   connect() {
     this.cuisines = [
@@ -79,24 +79,6 @@ export default class extends Controller {
   }
 
   announceWinner() {
-    const sliceAngle = (2 * Math.PI) / this.cuisines.length
-
-    // Fix for correct winner determination
-    // We need to reverse the rotation angle since our wheel spins clockwise
-    // and modulo to get the current position
-    const normalizedRotation = ((2 * Math.PI) - (this.rotation % (2 * Math.PI))) % (2 * Math.PI)
-
-    // The arrow points at the top (0 degrees in standard position)
-    // so we need to find which slice is there
-    const winningIndex = Math.floor(normalizedRotation / sliceAngle)
-
-    // Get the correct cuisine by making sure index is within bounds
-    const effectiveIndex = (winningIndex + this.cuisines.length) % this.cuisines.length
-
-    const resultElement = document.getElementById('result')
-    resultElement.textContent = `Tonight's dinner: ${this.cuisines[effectiveIndex].name} cuisine!`
-
-    // For debugging - uncomment to see the values
-    console.log(`Rotation: ${this.rotation.toFixed(2)}, Normalized: ${normalizedRotation.toFixed(2)}, Index: ${effectiveIndex}, Winner: ${this.cuisines[effectiveIndex].name}`)
+    this.formTarget.requestSubmit()
   }
 }

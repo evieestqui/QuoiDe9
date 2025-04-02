@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     end
   end
 
+  get "search", to: "restaurants#search"
+
   get "/dashboard", to: "pages#dashboard"
 
   root "restaurants#index"

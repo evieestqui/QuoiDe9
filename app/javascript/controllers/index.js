@@ -6,3 +6,6 @@ import { application } from "./application"
 
 import RouletteController from "./roulette_controller"
 application.register("roulette", RouletteController)
+
+import ModalController from "./modal_controller"
+application.register("modal", ModalController)
