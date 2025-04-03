@@ -6,7 +6,7 @@
       </svg>
     <% end %>
 
-    <%= cl_image_tag @restaurant.photo.key, class: "w-full h-[200px] object-cover", resize_to_limit: [400, 400] %>
+    <%= cl_image_tag @restaurant.photo.key, class: "w-full h-[200px] object-cover", width: 400, height: 400 %>
   </div>
 
 
@@ -56,7 +56,7 @@
         <div class="flex justify-between items-start">
           <div class="flex gap-4">
             <% if dish.photo.attached? %>
-              <%= cl_image_tag dish.photo.key, class: "w-24 h-24 object-cover rounded-lg", resize_to_limit: [200, 200] %>
+              <%= cl_image_tag dish.photo.key, class: "w-24 h-24 object-cover rounded-lg", width: 200, height: 200 %>
             <% end %>
             <div>
               <h4 class="font-medium"><%= dish.name %></h4>
@@ -79,7 +79,7 @@
         <div class="flex justify-between items-start">
           <div class="flex gap-4">
             <% if restaurant.photo.attached? %>
-              <%= cl_image_tag restaurant.photo.key, class: "w-24 h-24 object-cover rounded-lg", resize_to_limit: [200, 200] %>
+              <%= cl_image_tag restaurant.photo.key, class: "w-24 h-24 object-cover rounded-lg", width: 200, height: 200 %>
             <% end %>
             <div>
               <h4 class="font-medium"><%= restaurant.name %></h4>
