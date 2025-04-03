@@ -56,7 +56,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_31_154829) do
   create_table "dishes", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "price"
+    t.float "price"
     t.bigint "restaurant_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -81,7 +81,8 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_31_154829) do
     t.string "address"
     t.float "longitude"
     t.float "latitude"
-    t.integer "rating"
+    t.float "rating"
+    t.integer "number_of_reviews"
     t.string "food_preferences", default: [], array: true
     t.string "food_restrictions", default: [], array: true
     t.bigint "restaurant_owner_id", null: false

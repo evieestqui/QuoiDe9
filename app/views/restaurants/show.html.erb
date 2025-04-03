@@ -1,49 +1,99 @@
-<div class="container mx-auto px-4 py-6">
-  <div class="bg-white rounded-lg shadow-md overflow-hidden">
-    <div class="relative">
+<div class="bg-white rounded-lg overflow-hidden">
+  <div class="relative">
+    <%= link_to root_path, class: "absolute top-4 left-4 z-10 bg-white rounded-full p-2" do %>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    <% end %>
 
-      <%= cl_image_tag @restaurant.photo.key, class: "w-full h-48 object-cover" %>
-      <div class="absolute bottom-0 left-0 right-0 bg-red-600 text-white p-2">
-        <h2 class="text-xl font-bold"><%= @restaurant.name %></h2>
+    <%= cl_image_tag @restaurant.photo.key, class: "w-full h-[200px] object-cover" %>
+  </div>
+
+
+  <div class="container mx-auto py-6 px-4">
+    <h2 class="text-xl font-bold mb-2"><%= @restaurant.name %></h2>
+    <div class="flex items-center gap-3 text-sm">
+      <div class="flex items-center">
+        <span>★</span>
+        <span class="font-semibold ml-1"><%= @restaurant.rating %></span>
+        <span class="ml-1">(<%= @restaurant.number_of_reviews %> reviews)</span>
       </div>
+      <span>•</span>
+      <span>≈ 5 min walk</span>
+    </div>
+  </div>
+
+  <div class="px-4 py-2">
+    <div class="flex flex-wrap gap-2 mb-4">
+      <% @restaurant.food_preferences.each do |preference| %>
+        <span class="text-gray-600"><%= preference %></span>
+        <% unless preference == @restaurant.food_preferences.last %>
+          <span>•</span>
+        <% end %>
+      <% end %>
     </div>
 
-    <div class="p-4">
-      <div class="flex items-center mb-2">
-        <div class="text-yellow-500 mr-1">★</div>
-        <span class="font-semibold mr-2"><%= @restaurant.rating %></span>
-        <span class="text-gray-600">(10 reviews)</span>
-        <span class="mx-2">•</span>
-        <span class="text-gray-600"><%= 4 %> min walk</span>
-      </div>
-
-      <div class="flex flex-wrap gap-2 mb-4">
-        <% @restaurant.food_preferences.each do |preference| %>
-          <span class="text-gray-600"><%= preference %></span>
-          <% unless preference == @restaurant.food_preferences.last %>
-            <span>•</span>
-          <% end %>
+    <div class="flex flex-wrap gap-2 mb-6">
+      <% @restaurant.food_restrictions.each do |restriction| %>
+        <span class="text-gray-600"><%= restriction %></span>
+        <% unless restriction == @restaurant.food_restrictions.last %>
+          <span>•</span>
         <% end %>
-      </div>
+      <% end %>
+    </div>
 
-      <div class="flex flex-wrap gap-2 mb-4">
-        <% @restaurant.food_restrictions.each do |restriction| %>
-          <span class="text-gray-600"><%= restriction %></span>
-          <% unless restriction == @restaurant.food_restrictions.last %>
-            <span>•</span>
-          <% end %>
-        <% end %>
-      </div>
+    <button class="block w-full bg-black text-white text-center py-4 rounded-full font-medium text-lg">
+      Make Reservation
+    </button>
+  </div>
+</div>
 
-      <a href="#" class="block w-full bg-black text-white text-center py-3 rounded-md font-medium">
-        See Restaurant
-      </a>
+<div class="container mx-auto px-4 py-2">
+  <div class="mt-8">
+    <h3 class="text-lg font-semibold mb-4">Menu</h3>
+    <div class="space-y-4">
+      <% @restaurant.dishes.each do |dish| %>
+        <div class="flex justify-between items-start">
+          <div class="flex gap-4">
+            <% if dish.photo.attached? %>
+              <%= cl_image_tag dish.photo.key, class: "w-24 h-24 object-cover rounded-lg" %>
+            <% end %>
+            <div>
+              <h4 class="font-medium"><%= dish.name %></h4>
+              <p class="text-gray-600 text-sm"><%= dish.description %></p>
+            </div>
+          </div>
+          <div class="text-right">
+            <p class="font-medium">€<%= number_with_precision(dish.price, precision: 2) %></p>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 
   <div class="mt-8">
-    <h3 class="text-lg font-semibold mb-4">Other Recommended Restaurants</h3>
-
-
+    <h3 class="text-lg font-semibold mb-4">Other Restaurants You May Like</h3>
+    <div class="space-y-4">
+      <% @other_restaurants.each do |restaurant| %>
+        <%= link_to restaurant_path(restaurant, food_preferences: params[:food_preferences], food_restrictions: params[:food_restrictions]) do %>
+        <div class="flex justify-between items-start">
+          <div class="flex gap-4">
+            <% if restaurant.photo.attached? %>
+              <%= cl_image_tag restaurant.photo.key, class: "w-24 h-24 object-cover rounded-lg" %>
+            <% end %>
+            <div>
+              <h4 class="font-medium"><%= restaurant.name %></h4>
+              <p class="text-gray-600 text-sm"><%= restaurant.address %></p>
+              <div class="flex items-center gap-2 text-sm">
+                <span class="text-gray-600">⭐ <%= restaurant.rating %></span>
+                <span class="mx-2">•</span>
+                <span class="text-gray-600"><%= restaurant.number_of_reviews %> reviews</span>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

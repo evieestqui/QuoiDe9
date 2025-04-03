@@ -3,7 +3,7 @@ class CreateDishes < ActiveRecord::Migration[7.1]
     create_table :dishes do |t|
       t.string :name
       t.string :description
-      t.string :price
+      t.float :price
       t.references :restaurant, null: false, foreign_key: true
 
       t.timestamps
