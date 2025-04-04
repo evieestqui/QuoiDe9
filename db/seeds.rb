@@ -80,10 +80,10 @@ restaurants_data = [
     restaurant_owner: restaurant_owners[1],
     address: "15 Rue Basfroi, 75011 Paris",
     rating: 4.5,
-    food_preferences: ["Italian", "Pizza"],
-    food_restrictions: ["Gluten-Free", "Dairy-Free"],
+    food_preferences: ["Italian", "Burger"],
+    food_restrictions: ["Vegan", "Nut-Free"],
     number_of_reviews: 612,
-    image_url: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+    image_url: "https://images.unsplash.com/photo-1536329639134-ade172b2fea0"
   },
   {
     name: "La Guinguette d'Angèle",
@@ -93,7 +93,7 @@ restaurants_data = [
     food_preferences: ["Japanese", "Sushi"],
     food_restrictions: ["Vegan", "Gluten-Free", "Nut-Free"],
     number_of_reviews: 745,
-    image_url: "https://images.unsplash.com/photo-1514933651103-005eec06c04b"
+    image_url: "https://images.unsplash.com/photo-1696449241254-11cf7f18ce32"
   },
   {
     name: "Jah Jah",
@@ -254,6 +254,156 @@ restaurants_data = [
     food_restrictions: ["Vegetarian", "Vegan", "Shellfish-Free"],
     number_of_reviews: 850,
     image_url: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d"
+  },
+  {
+    name: "Le Petit Indien",
+    restaurant_owner: restaurant_owners[0],
+    address: "15 Rue de la Roquette, 75011 Paris",
+    rating: 4.8,
+    food_preferences: ["Indian", "BBQ"],
+    food_restrictions: ["Vegetarian", "Gluten-Free"],
+    number_of_reviews: 680,
+    image_url: "https://images.unsplash.com/photo-1585937421612-70a008356fbe"
+  },
+  {
+    name: "Tokyo Sushi Bar",
+    restaurant_owner: restaurant_owners[1],
+    address: "8 Rue de la Gaité, 75014 Paris",
+    rating: 4.7,
+    food_preferences: ["Japanese", "Sushi"],
+    food_restrictions: ["Shellfish-Free", "Dairy-Free"],
+    number_of_reviews: 890,
+    image_url: "https://images.unsplash.com/photo-1553621042-f6e147245754"
+  },
+  {
+    name: "La Taqueria",
+    restaurant_owner: restaurant_owners[2],
+    address: "55 Rue Oberkampf, 75011 Paris",
+    rating: 4.5,
+    food_preferences: ["Mexican", "Fast Food"],
+    food_restrictions: ["Vegan", "Nut-Free"],
+    number_of_reviews: 720,
+    image_url: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47"
+  },
+  {
+    name: "Dragon Wok",
+    restaurant_owner: restaurant_owners[3],
+    address: "63 Avenue Parmentier, 75011 Paris",
+    rating: 4.4,
+    food_preferences: ["Chinese", "Fast Food"],
+    food_restrictions: ["Halal", "Egg-Free"],
+    number_of_reviews: 550,
+    image_url: "https://images.unsplash.com/photo-1512003867696-6d5ce6835040"
+  },
+  {
+    name: "Burger Paradise",
+    restaurant_owner: restaurant_owners[4],
+    address: "20 Rue Saint-Antoine, 75004 Paris",
+    rating: 4.6,
+    food_preferences: ["Burger", "Fast Food"],
+    food_restrictions: ["Halal", "Gluten-Free"],
+    number_of_reviews: 830,
+    image_url: "https://images.unsplash.com/photo-1586816001966-79b736744398"
+  },
+  {
+    name: "Pasta Bella",
+    restaurant_owner: restaurant_owners[5],
+    address: "12 Rue des Martyrs, 75009 Paris",
+    rating: 4.5,
+    food_preferences: ["Italian", "Pizza"],
+    food_restrictions: ["Vegetarian", "Dairy-Free"],
+    number_of_reviews: 670,
+    image_url: "https://images.unsplash.com/photo-1481931098730-318b6f776db0"
+  },
+  {
+    name: "Le BBQ House",
+    restaurant_owner: restaurant_owners[6],
+    address: "25 Rue du Temple, 75004 Paris",
+    rating: 4.7,
+    food_preferences: ["BBQ", "Fast Food"],
+    food_restrictions: ["Shellfish-Free", "Nut-Free"],
+    number_of_reviews: 910,
+    image_url: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd"
+  },
+  {
+    name: "Sushi Master",
+    restaurant_owner: restaurant_owners[7],
+    address: "88 Boulevard Beaumarchais, 75011 Paris",
+    rating: 4.8,
+    food_preferences: ["Japanese", "Sushi"],
+    food_restrictions: ["Gluten-Free", "Dairy-Free"],
+    number_of_reviews: 780,
+    image_url: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c"
+  },
+  {
+    name: "Vegan Corner",
+    restaurant_owner: restaurant_owners[8],
+    address: "33 Rue des Rosiers, 75004 Paris",
+    rating: 4.6,
+    food_preferences: ["Burger", "Fast Food"],
+    food_restrictions: ["Vegan", "Gluten-Free"],
+    number_of_reviews: 640,
+    image_url: "https://images.unsplash.com/photo-1540914124281-342587941389"
+  },
+  {
+    name: "Spice of India",
+    restaurant_owner: restaurant_owners[9],
+    address: "45 Rue de Rivoli, 75004 Paris",
+    rating: 4.5,
+    food_preferences: ["Indian", "BBQ"],
+    food_restrictions: ["Vegetarian", "Nut-Free"],
+    number_of_reviews: 850,
+    image_url: "https://images.unsplash.com/photo-1585937421612-70a008356fbe"
+  },
+  {
+    name: "Mexican Fiesta",
+    restaurant_owner: restaurant_owners[10],
+    address: "18 Rue Saint-Maur, 75011 Paris",
+    rating: 4.4,
+    food_preferences: ["Mexican", "Fast Food"],
+    food_restrictions: ["Halal", "Dairy-Free"],
+    number_of_reviews: 590,
+    image_url: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b"
+  },
+  {
+    name: "Pizza Roma",
+    restaurant_owner: restaurant_owners[11],
+    address: "95 Rue Montorgueil, 75002 Paris",
+    rating: 4.7,
+    food_preferences: ["Pizza", "Italian"],
+    food_restrictions: ["Vegetarian", "Egg-Free"],
+    number_of_reviews: 730,
+    image_url: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002"
+  },
+  {
+    name: "Chinese Garden",
+    restaurant_owner: restaurant_owners[12],
+    address: "28 Avenue de Choisy, 75013 Paris",
+    rating: 4.3,
+    food_preferences: ["Chinese", "Fast Food"],
+    food_restrictions: ["Shellfish-Free", "Nut-Free"],
+    number_of_reviews: 480,
+    image_url: "https://images.unsplash.com/photo-1525755662778-989d0524087e"
+  },
+  {
+    name: "Burger & Co",
+    restaurant_owner: restaurant_owners[13],
+    address: "66 Rue de la Roquette, 75011 Paris",
+    rating: 4.6,
+    food_preferences: ["Burger", "Fast Food"],
+    food_restrictions: ["Halal", "Gluten-Free"],
+    number_of_reviews: 870,
+    image_url: "https://images.unsplash.com/photo-1550317138-10000687a72b"
+  },
+  {
+    name: "Tokyo Express",
+    restaurant_owner: restaurant_owners[14],
+    address: "22 Rue Saint-Anne, 75001 Paris",
+    rating: 4.5,
+    food_preferences: ["Japanese", "Sushi"],
+    food_restrictions: ["Vegan", "Dairy-Free"],
+    number_of_reviews: 620,
+    image_url: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c"
   }
 ]
 
@@ -267,75 +417,66 @@ end
 
 # Define dishes data with their respective restaurants
 dishes_data = [
-  { name: "Halal Chicken Burger", description: "Juicy halal chicken patty with fresh toppings", price: 12.99, restaurant: created_restaurants[0], image_url: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd" },
-  { name: "Vegan Fries", description: "Crispy potato fries", price: 4.99, restaurant: created_restaurants[0], image_url: "https://images.unsplash.com/photo-1630384060421-cb20d0e0649d" },
+  # For Pizza Roma (Vegetarian, Egg-Free, Pizza, Italian)
+  { name: "Vegetarian Margherita", description: "Classic egg-free pizza with tomatoes and basil", price: 13.99, restaurant: created_restaurants[0], image_url: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3" },
+  { name: "Egg-Free Pasta Primavera", description: "Fresh pasta with seasonal vegetables", price: 14.99, restaurant: created_restaurants[0], image_url: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601" },
+  { name: "Grilled Vegetable Pizza", description: "Assorted grilled vegetables on egg-free crust", price: 15.99, restaurant: created_restaurants[0], image_url: "https://images.unsplash.com/photo-1513104890138-7c749659a591" },
 
-  { name: "Gluten-Free Margherita Pizza", description: "Classic pizza with gluten-free base", price: 14.99, restaurant: created_restaurants[1], image_url: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3" },
-  { name: "Dairy-Free Pesto Pasta", description: "Fresh pasta with vegan pesto", price: 13.99, restaurant: created_restaurants[1], image_url: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601" },
-  { name: "Quinoa Salad", description: "Healthy quinoa with fresh vegetables", price: 11.99, restaurant: created_restaurants[1], image_url: "https://images.unsplash.com/photo-1505576399279-565b52d4ac71" },
+  # For Chinese Garden (Chinese, Fast Food, Shellfish-Free, Nut-Free)
+  { name: "Nut-Free Kung Pao Chicken", description: "Spicy chicken without peanuts", price: 12.99, restaurant: created_restaurants[1], image_url: "https://images.unsplash.com/photo-1525755662778-989d0524087e" },
+  { name: "Shellfish-Free Fried Rice", description: "Classic fried rice with vegetables", price: 10.99, restaurant: created_restaurants[1], image_url: "https://images.unsplash.com/photo-1603133872878-684f208fb84b" },
 
-  { name: "Avocado Sushi Roll", description: "Fresh avocado roll with rice", price: 8.99, restaurant: created_restaurants[2], image_url: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c" },
-  { name: "Miso Soup", description: "Traditional Japanese soup", price: 5.99, restaurant: created_restaurants[2], image_url: "https://images.unsplash.com/photo-1547592166-23ac45744acd" },
-  { name: "Tofu Poke Bowl", description: "Hawaiian-inspired bowl with tofu", price: 15.99, restaurant: created_restaurants[2], image_url: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c" },
+  # For Burger & Co (Burger, Fast Food, Halal, Gluten-Free)
+  { name: "Halal Beef Burger", description: "Gluten-free bun with certified halal beef", price: 14.99, restaurant: created_restaurants[2], image_url: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd" },
+  { name: "Gluten-Free Chicken Burger", description: "Halal chicken with special bun", price: 13.99, restaurant: created_restaurants[2], image_url: "https://images.unsplash.com/photo-1550317138-10000687a72b" },
 
-  { name: "BBQ Jackfruit Burger", description: "Plant-based BBQ burger", price: 13.99, restaurant: created_restaurants[3], image_url: "https://images.unsplash.com/photo-1550950158-d0d960dff51b" },
-  { name: "Grilled Plantain Skewers", description: "Sweet and savory grilled plantains", price: 8.99, restaurant: created_restaurants[3], image_url: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1" },
-  { name: "Vegan Coleslaw", description: "Creamy dairy-free coleslaw", price: 5.99, restaurant: created_restaurants[3], image_url: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601" },
+  # For Tokyo Express (Japanese, Sushi, Vegan, Dairy-Free)
+  { name: "Vegan Roll", description: "Plant-based tofu steak roll", price: 11.99, restaurant: created_restaurants[3], image_url: "https://images.unsplash.com/photo-1679744034962-c0650a2a20b3?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Dairy-Free Ramen", description: "Traditional ramen with plant-based broth", price: 13.99, restaurant: created_restaurants[3], image_url: "https://images.unsplash.com/photo-1557872943-16a5ac26437e" },
 
-  { name: "Lactose-Free Cheese Pizza", description: "Pizza with dairy-free cheese", price: 15.99, restaurant: created_restaurants[4], image_url: "https://images.unsplash.com/photo-1513104890138-7c749659a591" },
-  { name: "Nut-Free Pesto Pasta", description: "Safe and delicious pesto pasta", price: 14.99, restaurant: created_restaurants[4], image_url: "https://images.unsplash.com/photo-1551183053-bf91a1d81141" },
-  { name: "Italian Veggie Burger", description: "Mediterranean-style veggie burger", price: 13.99, restaurant: created_restaurants[4], image_url: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90" },
+  # For Le Balzar (Chinese, BBQ, Shellfish-Free, Nut-Free)
+  { name: "Nut-Free Sweet and Sour Chicken", description: "Chinese-style souce without nuts", price: 16.99, restaurant: created_restaurants[4], image_url: "https://images.unsplash.com/photo-1623653387945-2fd25214f8fc" },
+  { name: "Gyoza", description: "Mixed vegetables with chicken", price: 14.99, restaurant: created_restaurants[4], image_url: "https://images.unsplash.com/photo-1541696432-82c6da8ce7bf" },
 
-  { name: "Mapo Tofu", description: "Spicy tofu dish", price: 12.99, restaurant: created_restaurants[5], image_url: "https://images.unsplash.com/photo-1541696432-82c6da8ce7bf" },
-  { name: "Egg-Free Fried Rice", description: "Vegan Chinese fried rice", price: 11.99, restaurant: created_restaurants[5], image_url: "https://images.unsplash.com/photo-1603133872878-684f208fb84b" },
+  # For NOVETTINO_Bastille (Burger, Fast Food, Nut-Free, Halal)
+  { name: "Halal Chicken Burger", description: "Certified halal chicken burger", price: 13.99, restaurant: created_restaurants[5], image_url: "https://images.unsplash.com/photo-1615297928064-24977384d0da?q=80&w=2824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Nut-Free Veggie Burger", description: "Safe vegetarian option", price: 12.99, restaurant: created_restaurants[5], image_url: "https://images.unsplash.com/photo-1525059696034-4967a8e1dca2" },
 
-  { name: "Vegan Black Bean Burger", description: "Hearty black bean patty", price: 13.99, restaurant: created_restaurants[6], image_url: "https://images.unsplash.com/photo-1525059696034-4967a8e1dca2" },
-  { name: "Nut-Free Veggie Nuggets", description: "Crispy vegetable nuggets", price: 9.99, restaurant: created_restaurants[6], image_url: "https://images.unsplash.com/photo-1562967914-608f82629710" },
+  # For Café de Flore (Mexican, Burger, Dairy-Free, Halal)
+  { name: "Dairy-Free Mexican Pizza", description: "Halal beef with Mexican spices", price: 15.99, restaurant: created_restaurants[6], image_url: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" },
+  { name: "Halal Tacos", description: "Certified halal meat tacos", price: 12.99, restaurant: created_restaurants[6], image_url: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b" },
 
-  { name: "Falafel Tacos", description: "Middle Eastern-Mexican fusion", price: 11.99, restaurant: created_restaurants[7], image_url: "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85" },
-  { name: "Hummus Bowl", description: "Fresh hummus with toppings", price: 9.99, restaurant: created_restaurants[7], image_url: "https://images.unsplash.com/photo-1577805947697-89e18249d767" },
-  { name: "Halal Vegan Wrap", description: "Plant-based halal wrap", price: 10.99, restaurant: created_restaurants[7], image_url: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f" },
+  # For Chez Francis (Sushi, Japanese, Vegetarian, Vegan, Shellfish-Free)
+  { name: "Vegan Sushi Platter", description: "Assorted plant-based sushi", price: 18.99, restaurant: created_restaurants[7], image_url: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351" },
+  { name: "Wok Veggie", description: "Crispy vegetables", price: 11.99, restaurant: created_restaurants[7], image_url: "https://images.unsplash.com/photo-1692742246345-c6e7f28ae345?q=80&w=3005&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
 
-  { name: "Margherita Pizza", description: "Classic Italian pizza", price: 14.99, restaurant: created_restaurants[8], image_url: "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca" },
-  { name: "Pasta Pomodoro", description: "Simple tomato pasta", price: 12.99, restaurant: created_restaurants[8], image_url: "https://images.unsplash.com/photo-1608897013039-887f21d8c804" },
-  { name: "Tiramisu", description: "Classic Italian dessert", price: 7.99, restaurant: created_restaurants[8], image_url: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9" },
+  # For Le Petit Indien (Indian, BBQ, Vegetarian, Gluten-Free)
+  { name: "Gluten-Free Tandoori", description: "Clay oven grilled vegetables", price: 16.99, restaurant: created_restaurants[8], image_url: "https://images.unsplash.com/photo-1727280376746-b89107a5b0df?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
+  { name: "Vegetarian Platter Salad", description: "Assorted grilled vegetables", price: 15.99, restaurant: created_restaurants[8], image_url: "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38" },
 
-  { name: "Grilled Vegetables", description: "Seasonal grilled vegetables", price: 10.99, restaurant: created_restaurants[9], image_url: "https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38" },
-  { name: "BBQ Chicken", description: "Grilled BBQ chicken", price: 15.99, restaurant: created_restaurants[9], image_url: "https://images.unsplash.com/photo-1527477396000-e27163b481c2" },
-  { name: "Dairy-Free Pasta", description: "Pasta without dairy", price: 13.99, restaurant: created_restaurants[9], image_url: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9" },
+  # For Tokyo Sushi Bar (Japanese, Sushi, Shellfish-Free, Dairy-Free)
+  { name: "Dairy-Free Dragon Roll", description: "Special roll without cream cheese", price: 14.99, restaurant: created_restaurants[9], image_url: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c" },
+  { name: "Shellfish-Free Bento Box", description: "Safe Japanese combo", price: 19.99, restaurant: created_restaurants[9], image_url: "https://images.unsplash.com/photo-1629684782790-385ed5adb497?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" },
 
-  { name: "Vegetable Sushi Rolls", description: "Fresh vegetable maki", price: 9.99, restaurant: created_restaurants[10], image_url: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351" },
-  { name: "Miso Soup", description: "Traditional miso soup", price: 4.99, restaurant: created_restaurants[10], image_url: "https://images.unsplash.com/photo-1607301405390-d831c242f59b" },
+  # For La Taqueria (Mexican, Fast Food, Vegan, Nut-Free)
+  { name: "Vegan Street Tacos", description: "Plant-based Mexican classic", price: 11.99, restaurant: created_restaurants[10], image_url: "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85" },
+  { name: "Nut-Free Mexican Bowl", description: "Safe burrito bowl", price: 13.99, restaurant: created_restaurants[10], image_url: "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d" },
 
-  { name: "Halal BBQ Ribs", description: "Halal-certified ribs", price: 18.99, restaurant: created_restaurants[11], image_url: "https://images.unsplash.com/photo-1544025162-d76694265947" },
-  { name: "Gluten-Free Burger", description: "Burger with GF bun", price: 14.99, restaurant: created_restaurants[11], image_url: "https://images.unsplash.com/photo-1565299507177-b0ac66763828" },
-  { name: "Grilled Chicken", description: "Simple grilled chicken", price: 13.99, restaurant: created_restaurants[11], image_url: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b" },
+  # For Dragon Wok (Chinese, Fast Food, Halal, Egg-Free)
+  { name: "Halal Chicken Stir-Fry", description: "Certified meat with vegetables", price: 12.99, restaurant: created_restaurants[11], image_url: "https://images.unsplash.com/photo-1525755662778-989d0524087e" },
+  { name: "Egg-Free Fried Rice", description: "Traditional rice dish without egg", price: 10.99, restaurant: created_restaurants[11], image_url: "https://images.unsplash.com/photo-1603133872878-684f208fb84b" },
 
-  { name: "Vegetable Curry", description: "Spicy vegetable curry", price: 12.99, restaurant: created_restaurants[12], image_url: "https://images.unsplash.com/photo-1574894709920-11b28e7367e3" },
-  { name: "Stir-Fried Tofu", description: "Chinese-style tofu", price: 11.99, restaurant: created_restaurants[12], image_url: "https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f" },
+  # For Burger Paradise (Burger, Fast Food, Halal, Gluten-Free)
+  { name: "Gluten-Free Halal Burger", description: "Special bun with certified meat", price: 15.99, restaurant: created_restaurants[12], image_url: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd" },
+  { name: "Halal Chicken Sandwich", description: "Gluten-free chicken burger", price: 13.99, restaurant: created_restaurants[12], image_url: "https://images.unsplash.com/photo-1550317138-10000687a72b" },
 
-  { name: "Veggie Tacos", description: "Mexican vegetable tacos", price: 11.99, restaurant: created_restaurants[13], image_url: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b" },
-  { name: "Four Cheese Pizza", description: "Pizza with four cheeses", price: 16.99, restaurant: created_restaurants[13], image_url: "https://images.unsplash.com/photo-1513104890138-7c749659a591" },
-  { name: "Mexican Pizza", description: "Pizza with Mexican toppings", price: 15.99, restaurant: created_restaurants[13], image_url: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" },
+  # For Pasta Bella (Italian, Pizza, Vegetarian, Dairy-Free)
+  { name: "Dairy-Free Pizza", description: "Classic pizza with vegan cheese", price: 14.99, restaurant: created_restaurants[13], image_url: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3" },
+  { name: "Vegetarian Pasta", description: "Fresh pasta with vegetables", price: 13.99, restaurant: created_restaurants[13], image_url: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601" },
 
-  { name: "Marinara Pizza", description: "Classic tomato pizza", price: 13.99, restaurant: created_restaurants[14], image_url: "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47" },
-  { name: "Pasta Arrabiata", description: "Spicy tomato pasta", price: 12.99, restaurant: created_restaurants[14], image_url: "https://images.unsplash.com/photo-1563379926898-05f4575a45d8" },
-  { name: "Bruschetta", description: "Toasted bread with toppings", price: 7.99, restaurant: created_restaurants[14], image_url: "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f" },
-
-  { name: "Kung Pao Chicken", description: "Spicy Chinese chicken", price: 14.99, restaurant: created_restaurants[15], image_url: "https://images.unsplash.com/photo-1525755662778-989d0524087e" },
-  { name: "BBQ Pork", description: "Chinese-style BBQ pork", price: 15.99, restaurant: created_restaurants[15], image_url: "https://images.unsplash.com/photo-1623653387945-2fd25214f8fc" },
-  { name: "Vegetable Fried Rice", description: "Classic fried rice", price: 11.99, restaurant: created_restaurants[15], image_url: "https://images.unsplash.com/photo-1603133872878-684f208fb84b" },
-
-  { name: "Halal Beef Burger", description: "Halal-certified burger", price: 14.99, restaurant: created_restaurants[16], image_url: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd" },
-  { name: "Chicken Wings", description: "Crispy chicken wings", price: 12.99, restaurant: created_restaurants[16], image_url: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f" },
-
-  { name: "Dairy-Free Nachos", description: "Nachos without cheese", price: 10.99, restaurant: created_restaurants[17], image_url: "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d" },
-  { name: "Halal Beef Burger", description: "Halal-certified burger", price: 14.99, restaurant: created_restaurants[17], image_url: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd" },
-  { name: "Spicy Black Bean Tacos", description: "Vegetarian bean tacos", price: 11.99, restaurant: created_restaurants[17], image_url: "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85" },
-
-  { name: "Cucumber Maki Rolls", description: "Fresh cucumber sushi", price: 8.99, restaurant: created_restaurants[18], image_url: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c" },
-  { name: "Miso-Glazed Eggplant", description: "Grilled Japanese eggplant", price: 12.99, restaurant: created_restaurants[18], image_url: "https://images.unsplash.com/photo-1574484284002-952d92456975" },
-  { name: "Vegan Ramen", description: "Plant-based ramen soup", price: 13.99, restaurant: created_restaurants[18], image_url: "https://images.unsplash.com/photo-1557872943-16a5ac26437e" }
+  # For Les Tontons Veg (Burger, Fast Food, Vegan, Nut-Free)
+  { name: "Vegan Black Bean Burger", description: "Plant-based patty", price: 13.99, restaurant: created_restaurants[14], image_url: "https://images.unsplash.com/photo-1525059696034-4967a8e1dca2" },
+  { name: "Nut-Free Veggie Wrap", description: "Safe vegan wrap", price: 11.99, restaurant: created_restaurants[14], image_url: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f" }
 ]
 
 dishes_data.each do |dish_data|

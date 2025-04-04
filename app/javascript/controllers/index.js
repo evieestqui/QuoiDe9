@@ -9,3 +9,6 @@ application.register("roulette", RouletteController)
 
 import ModalController from "./modal_controller"
 application.register("modal", ModalController)
+
+import AddressAutocompleteController from "./address_autocomplete_controller"
+application.register("address-autocomplete", AddressAutocompleteController)
