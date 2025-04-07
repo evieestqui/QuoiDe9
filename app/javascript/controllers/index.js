@@ -12,3 +12,9 @@ application.register("modal", ModalController)
 
 import AddressAutocompleteController from "./address_autocomplete_controller"
 application.register("address-autocomplete", AddressAutocompleteController)
+
+import DatepickerController from "./datepicker_controller"
+application.register("datepicker", DatepickerController)
+
+import BookingController from "./booking_controller"
+application.register("booking", BookingController)

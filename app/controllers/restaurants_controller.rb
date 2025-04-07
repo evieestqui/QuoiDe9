@@ -1,4 +1,5 @@
 class RestaurantsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show, :search]
   def index
     @restaurants = Restaurant.all
   end
@@ -50,17 +51,6 @@ class RestaurantsController < ApplicationController
       redirect_to @restaurant, notice: "Restaurant successfully added!"
     else
       render :new
-    end
-  end
-
-  def random
-    cuisine = params[:cuisine]
-    @restaurant = Restaurant.where("? = ANY (categories)", cuisine)
-                           .order("RANDOM()")
-                           .first
-
-    respond_to do |format|
-      format.json { render json: { id: @restaurant.id } }
     end
   end
 

@@ -1,0 +1,47 @@
+<div class="bg-white rounded-lg overflow-hidden">
+  <div class="relative">
+    <%= link_to restaurant_path(@restaurant), class: "absolute top-4 left-4 z-10 bg-white rounded-full p-2" do %>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+      </svg>
+    <% end %>
+
+    <%= cl_image_tag @restaurant.photo.key, class: "w-full h-[200px] object-cover", width: 400, height: 400 %>
+  </div>
+
+
+  <div class="container mx-auto py-6 px-4">
+    <h2 class="text-xl font-bold mb-2"><%= @restaurant.name %></h2>
+    <div class="flex items-center gap-3 text-sm">
+      <div class="flex items-center">
+        <span>★</span>
+        <span class="font-semibold ml-1"><%= @restaurant.rating %></span>
+        <span class="ml-1">(<%= @restaurant.number_of_reviews %> reviews)</span>
+      </div>
+      <span>•</span>
+      <span>≈ 5 min walk</span>
+    </div>
+  </div>
+
+  <div class="container mx-auto py-6 px-4" data-controller="booking">
+    <%= simple_form_for [@restaurant, @booking] do |f| %>
+      <div class="flex flex-col gap-4 transition-all duration-300 ease-in-out" data-booking-target="step">
+        <%= f.input :number_of_people, as: :select, collection: 1..10, include_blank: false, input_html: { class: "w-full rounded-lg border-gray-300 focus:border-black focus:ring-black" } %>
+        <%= f.input :date, as: :string, input_html: { data: { controller: "datepicker" }, class: "w-full rounded-lg border-gray-300 focus:border-black focus:ring-black" } %>
+        <%= f.input :time, as: :select, collection: (9..23).flat_map { |hour| ["#{format('%02d', hour)}:00", "#{format('%02d', hour)}:15", "#{format('%02d', hour)}:30", "#{format('%02d', hour)}:45"] }, include_blank: false, input_html: { class: "w-full rounded-lg border-gray-300 focus:border-black focus:ring-black" } %>
+        <button type="button" class="block w-full bg-black text-white text-center py-4 rounded-full font-medium text-lg hover:bg-gray-800 transition-colors" data-action="booking#next">Continue</button>
+      </div>
+
+      <div class="flex flex-col gap-4 transition-all duration-300 ease-in-out hidden" data-booking-target="step">
+        <%= f.input :first_name, as: :string, input_html: { class: "w-full rounded-lg border-gray-300 focus:border-black focus:ring-black" } %>
+        <%= f.input :last_name, as: :string, input_html: { class: "w-full rounded-lg border-gray-300 focus:border-black focus:ring-black" } %>
+        <%= f.input :email, as: :email, input_html: { class: "w-full rounded-lg border-gray-300 focus:border-black focus:ring-black" } %>
+        <%= f.input :phone_number, as: :tel, input_html: { class: "w-full rounded-lg border-gray-300 focus:border-black focus:ring-black" } %>
+
+        <button type="button" class="block w-full bg-gray-300 text-white text-center py-4 rounded-full font-medium text-lg hover:bg-gray-400 transition-colors" data-action="booking#previous">Back</button>
+        <%= f.submit "Make Reservation", class: "block w-full bg-black text-white text-center py-4 rounded-full font-medium text-lg hover:bg-gray-800 transition-colors" %>
+      </div>
+    <% end %>
+  </div>
+
+</div>

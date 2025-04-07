@@ -4,6 +4,6 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @bookings = current_user.bookings if user_signed_in?
+    @bookings = current_user.bookings
   end
 end
