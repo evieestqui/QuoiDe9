@@ -2,10 +2,6 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :store_user_location!, if: :storable_location?
 
-  def after_sign_in_path_for(resource_or_scope)
-    stored_location_for(resource_or_scope)
-  end
-
   private
   # Its important that the location is NOT stored if:
   # - The request method is not GET (non idempotent)
@@ -24,6 +20,6 @@ class ApplicationController < ActionController::Base
 
   def store_user_location!
     # :user is the scope we are authenticating
-    store_location_for(:user, request.fullpath)
+    store_location_for(:user, request.fullpath) if storable_location?
   end
 end

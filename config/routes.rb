@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :restaurant_owners
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'users/sessions' }
 
   resources :restaurants, only: [:index, :show, :new, :create, :edit, :update] do
     resources :bookings, only: [:new, :create]

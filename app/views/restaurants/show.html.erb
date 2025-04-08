@@ -18,8 +18,12 @@
         <span class="font-semibold ml-1"><%= @restaurant.rating %></span>
         <span class="ml-1">(<%= @restaurant.number_of_reviews %> reviews)</span>
       </div>
+      <% if params[:address].present? %>
       <span>•</span>
-      <span>≈ 5 min walk</span>
+        <% distance = Geocoder::Calculations.distance_between(params[:address], @restaurant.address, units: :km) %>
+        <% walking_time = (distance * 1000 / 83.33).round %> <%# 83.33 m/min walking speed %>
+        <span>≈ <%= walking_time %> min walk</span>
+      <% end %>
     </div>
   </div>
 

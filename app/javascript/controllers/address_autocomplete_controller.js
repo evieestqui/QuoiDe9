@@ -9,7 +9,7 @@ export default class extends Controller {
   connect() {
     this.geocoder = new MapboxGeocoder({
       accessToken: this.apiKeyValue,
-      types: "country,region,place,postcode,locality,neighborhood,address",
+      types: "address",
       language: "en",
       enableGeolocation: true,
       placeholder: "Search for a location",
@@ -27,10 +27,12 @@ export default class extends Controller {
 
   #setInputValue(event) {
     this.addressTarget.value = event.result["place_name"]
+    document.getElementById("location").textContent = event.result.context[3].text_en
   }
 
   #clearInputValue() {
     this.addressTarget.value = ""
+    document.getElementById("location").textContent = "My location"
   }
 
   disconnect() {
