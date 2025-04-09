@@ -799,11 +799,11 @@ experiences_data = [
   {
     name: "Parisian Food Tour",
     description: "Explore the hidden gems of Parisian cuisine with a local guide",
-    price: 89,
+    price: 50,
     rating: 4.5,
     number_of_reviews: 156,
-    categories: ["Food", "Culture"],
-    image_url: "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+    categories: ["Food", "Culture", "Adventure", "Art"],
+    image_url: "https://images.unsplash.com/photo-1599894418362-4f54dfe0a5f8"
   },
   {
     name: "Wine Tasting in Montmartre",
@@ -824,40 +824,31 @@ experiences_data = [
     image_url: "https://images.unsplash.com/photo-1558326567-98ae2405596b"
   },
   {
-    name: "Seine River Dinner Cruise",
-    description: "Enjoy a gourmet dinner while cruising the Seine",
-    price: 120,
-    rating: 4.6,
-    number_of_reviews: 234,
-    categories: ["Food", "Culture"],
-    image_url: "https://images.unsplash.com/photo-1549918864-48ac978761a4"
-  },
-  {
     name: "Cheese and Wine Pairing",
     description: "Learn about French cheeses and their perfect wine matches",
     price: 55,
     rating: 4.9,
     number_of_reviews: 167,
     categories: ["Food", "Culture"],
-    image_url: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd"
+    image_url: "https://images.unsplash.com/photo-1598306442890-742e834da092"
   },
   {
-    name: "Boulangerie Workshop",
+    name: "Make your own croissant",
     description: "Master the art of French bread making",
     price: 70,
     rating: 4.8,
     number_of_reviews: 98,
     categories: ["Food", "Culture"],
-    image_url: "https://images.unsplash.com/photo-1509440159596-0249088772ff"
+    image_url: "https://images.unsplash.com/photo-1530610476181-d83430b64dcd"
   },
   {
-    name: "Chocolate Making Experience",
-    description: "Create your own French chocolates with a master chocolatier",
+    name: "Dog yoga with view of the Eiffel Tower",
+    description: "Yoga with doggos while enjoying the view of the Eiffel Tower",
     price: 85,
     rating: 4.7,
     number_of_reviews: 145,
-    categories: ["Food", "Culture"],
-    image_url: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c"
+    categories: ["Adventure", "Sports"],
+    image_url: "https://images.unsplash.com/photo-1658924454888-050188a1dcb3"
   },
   {
     name: "Market Tour & Cooking Class",
@@ -866,7 +857,7 @@ experiences_data = [
     rating: 4.9,
     number_of_reviews: 178,
     categories: ["Food", "Culture"],
-    image_url: "https://images.unsplash.com/photo-1556911220-bff31c812dba"
+    image_url: "https://images.unsplash.com/photo-1589470288084-ecad61835772"
   },
   {
     name: "Cocktail Mixology Class",
@@ -885,6 +876,96 @@ experiences_data = [
     number_of_reviews: 67,
     categories: ["Food", "Art"],
     image_url: "https://images.unsplash.com/photo-1490645935967-10de6ba17061"
+  },
+  {
+    name: "Exploring Les catacombes de Paris",
+    description: "Step back in time underground in the catacombs of Paris",
+    price: 45,
+    rating: 4.8,
+    number_of_reviews: 112,
+    categories: ["History", "Culture", "Adventure"],
+    image_url: "https://french-nautilus.b-cdn.net/wp-content/uploads/2022/04/Catacombes-2.jpg"
+  },
+  {
+    name: "Haute couture of classic french tailoring workshop",
+    description: "Deep dive into the world of classic french tailoring",
+    price: 95,
+    rating: 4.6,
+    number_of_reviews: 76,
+    categories: ["Culture", "Art"],
+    image_url: "https://images.unsplash.com/photo-1562347174-7370ad83dc47"
+  },
+  {
+    name: "Ceramics of Le Marais",
+    description: "Make your own ceramics in the Marais district",
+    price: 30,
+    rating: 4.9,
+    number_of_reviews: 148,
+    categories: ["Culture", "Art", "Shopping"],
+    image_url: "https://images.unsplash.com/photo-1616886888643-bdb88fb92812"
+  },
+  {
+    name: "Buttes-Chaumont Sketching Challenge",
+    description: "Creative Sketching class in Paris' most scenic urban park for epic views and nature",
+    price: 25,
+    rating: 4.5,
+    number_of_reviews: 63,
+    categories: ["Nature", "Adventure", "Art"],
+    image_url: "https://images.unsplash.com/photo-1720031995259-f2d8ea9734fd"
+  },
+  {
+    name: "Escape Game in the Château Vieux de Saint-Germain-en-Laye ",
+    description: "Exceptional escape game in the Château Vieux de Saint-Germain-en-Laye",
+    price: 40,
+    rating: 4.7,
+    number_of_reviews: 89,
+    categories: ["Adventure", "Sports", "Games"],
+    image_url: "https://static.apidae-tourisme.com/filestore/objets-touristiques/images/90/239/8384346-diaporama.jpg"
+  },
+  {
+    name: "Escape Room Experience: The Louvre Heist",
+    description: "Solve puzzles and crack codes in this art-themed escape adventure",
+    price: 35,
+    rating: 4.8,
+    number_of_reviews: 54,
+    categories: ["Games", "Adventure"],
+    image_url: "https://images.unsplash.com/photo-1599548291260-8a88e3d3b095"
+  },
+  {
+    name: "Introduction to Archery in Parc Floral",
+    description: "Try your hand at archery in a peaceful garden setting",
+    price: 28,
+    rating: 4.4,
+    number_of_reviews: 39,
+    categories: ["Sports", "Nature"],
+    image_url: "https://images.unsplash.com/photo-1641531105535-1ead3c1784ab"
+  },
+  {
+    name: "Interactive French Revolution Tour",
+    description: "Experience Paris in 1789 with immersive stories and reenactments",
+    price: 50,
+    rating: 4.9,
+    number_of_reviews: 97,
+    categories: ["History", "Games"],
+    image_url: "https://images.unsplash.com/photo-1531752148124-118ba196fc7b"
+  },
+  {
+    name: "Boules & Baguettes: Parisian Park Games",
+    description: "Play pétanque like a local and enjoy a baguette picnic",
+    price: 15,
+    rating: 4.3,
+    number_of_reviews: 65,
+    categories: ["Games", "Culture", "Sports"],
+    image_url: "https://images.unsplash.com/photo-1595971649687-0901985665a1"
+  },
+  {
+    name: "Sunrise Run Along the Seine",
+    description: "Start your day with a scenic group run through the heart of Paris",
+    price: 15,
+    rating: 4.6,
+    number_of_reviews: 81,
+    categories: ["Sports", "Nature"],
+    image_url: "https://images.unsplash.com/photo-1550620224-150e0de822ff"
   }
 ]
 
