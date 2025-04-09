@@ -6,6 +6,8 @@ puts "Destroying all restaurants"
 Restaurant.destroy_all
 puts "Destroying all dishes"
 Dish.destroy_all
+puts "Destroying all experiences"
+Experience.destroy_all
 
 # Helper method to attach image from URL
 def attach_image_from_url(record, image_url)
@@ -792,3 +794,107 @@ restaurants_data.each do |restaurant_data|
     dish.save
   end
 end
+
+experiences_data = [
+  {
+    name: "Parisian Food Tour",
+    description: "Explore the hidden gems of Parisian cuisine with a local guide",
+    price: 89,
+    rating: 4.5,
+    number_of_reviews: 156,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+  },
+  {
+    name: "Wine Tasting in Montmartre",
+    description: "Discover French wines in a charming Montmartre cellar",
+    price: 65,
+    rating: 4.9,
+    number_of_reviews: 89,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3"
+  },
+  {
+    name: "Macaron Making Class",
+    description: "Learn to make authentic French macarons from a pastry chef",
+    price: 75,
+    rating: 4.7,
+    number_of_reviews: 42,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1558326567-98ae2405596b"
+  },
+  {
+    name: "Seine River Dinner Cruise",
+    description: "Enjoy a gourmet dinner while cruising the Seine",
+    price: 120,
+    rating: 4.6,
+    number_of_reviews: 234,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1549918864-48ac978761a4"
+  },
+  {
+    name: "Cheese and Wine Pairing",
+    description: "Learn about French cheeses and their perfect wine matches",
+    price: 55,
+    rating: 4.9,
+    number_of_reviews: 167,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd"
+  },
+  {
+    name: "Boulangerie Workshop",
+    description: "Master the art of French bread making",
+    price: 70,
+    rating: 4.8,
+    number_of_reviews: 98,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1509440159596-0249088772ff"
+  },
+  {
+    name: "Chocolate Making Experience",
+    description: "Create your own French chocolates with a master chocolatier",
+    price: 85,
+    rating: 4.7,
+    number_of_reviews: 145,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c"
+  },
+  {
+    name: "Market Tour & Cooking Class",
+    description: "Shop at a local market and cook with fresh ingredients",
+    price: 95,
+    rating: 4.9,
+    number_of_reviews: 178,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1556911220-bff31c812dba"
+  },
+  {
+    name: "Cocktail Mixology Class",
+    description: "Learn to make French-inspired cocktails",
+    price: 60,
+    rating: 4.6,
+    number_of_reviews: 89,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1551538827-9c037cb4f32a"
+  },
+  {
+    name: "Food Photography Workshop",
+    description: "Learn to capture the beauty of French cuisine",
+    price: 80,
+    rating: 4.7,
+    number_of_reviews: 67,
+    categories: ["Food", "Art"],
+    image_url: "https://images.unsplash.com/photo-1490645935967-10de6ba17061"
+  }
+]
+
+experiences_data.each do |experience_data|
+  puts "Creating experience: #{experience_data[:name]} - #{experiences_data.index(experience_data) + 1}/#{experiences_data.length}"
+
+  image_url = experience_data.delete(:image_url)
+  experience = Experience.new(experience_data)
+  attach_image_from_url(experience, image_url)
+  experience.save
+end
+
+puts "Created #{Experience.count} experiences"

@@ -21,10 +21,10 @@
     </div>
 
     <div class="mode-toggle">
-      <button class="mode-button active">
+      <button class="mode-button active" id="restaurant-mode">
         <i class="fa-solid fa-utensils"></i>
       </button>
-      <button class="mode-button">
+      <button class="mode-button" id="experience-mode">
         <i class="fa-solid fa-mountain-sun"></i>
       </button>
     </div>
@@ -97,7 +97,7 @@
     }
   </style>
 
-<div class="roulette-container">
+<div class="roulette-container" id="restaurant-container">
   <div class="wheel">
     <img src="wheel.png" alt="Roulette Wheel" id="rouletteWheel">
   </div>
@@ -109,7 +109,40 @@
   <button class="start-button" onclick="startRoulette()">Start Roulette</button>
 </div>
 
+<div class="roulette-container" id="experience-container" style="display: none;">
+  <div class="wheel">
+    <img src="wheel.png" alt="Experience Wheel" id="experienceWheel">
+  </div>
+
+  <h2 class="category-title">Experience</h2>
+  <h1 class="description">Start Roulette to<br>Discover Experience</h1>
+  <p class="sub-description">Once roulette stops,<br>a random experience will be displayed for you.</p>
+
+  <button class="start-button" onclick="startExperienceRoulette()">Start Roulette</button>
+</div>
+
 <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const restaurantMode = document.getElementById('restaurant-mode');
+    const experienceMode = document.getElementById('experience-mode');
+    const restaurantContainer = document.getElementById('restaurant-container');
+    const experienceContainer = document.getElementById('experience-container');
+
+    restaurantMode.addEventListener('click', function() {
+      restaurantMode.classList.add('active');
+      experienceMode.classList.remove('active');
+      restaurantContainer.style.display = 'block';
+      experienceContainer.style.display = 'none';
+    });
+
+    experienceMode.addEventListener('click', function() {
+      experienceMode.classList.add('active');
+      restaurantMode.classList.remove('active');
+      experienceContainer.style.display = 'block';
+      restaurantContainer.style.display = 'none';
+    });
+  });
+
   function startRoulette() {
     const wheel = document.getElementById('rouletteWheel');
     const randomRotation = 1800 + Math.random() * 360; // Spin at least 5 times
@@ -118,6 +151,17 @@
     // Add logic here to display random restaurant after spin
     setTimeout(() => {
       // Display restaurant logic
+    }, 3000);
+  }
+
+  function startExperienceRoulette() {
+    const wheel = document.getElementById('experienceWheel');
+    const randomRotation = 1800 + Math.random() * 360; // Spin at least 5 times
+    wheel.style.transform = `rotate(${randomRotation}deg)`;
+
+    // Add logic here to display random experience after spin
+    setTimeout(() => {
+      // Display experience logic
     }, 3000);
   }
 </script>

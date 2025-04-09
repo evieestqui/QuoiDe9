@@ -16,6 +16,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def restaurant_mode
+    current_user.update(mode: "restaurant")
+    redirect_to restaurants_path
+  end
+
+  def experience_mode
+    current_user.update(mode: "experience")
+    redirect_to experiences_path
+  end
+
+
   private
 
   def user_params
