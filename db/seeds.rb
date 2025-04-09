@@ -6,6 +6,8 @@ puts "Destroying all restaurants"
 Restaurant.destroy_all
 puts "Destroying all dishes"
 Dish.destroy_all
+puts "Destroying all experiences"
+Experience.destroy_all
 
 # Helper method to attach image from URL
 def attach_image_from_url(record, image_url)
@@ -24,6 +26,8 @@ end
 puts "Creating users"
 ivy = User.create(name: "Ivy", email: "ivy@chiang.com", password: "password")
 helen = User.create(name: "Helen", email: "helen@chiang.com", password: "password")
+demo = User.create(name: "demo", email: "next@example.com", password: "testtest")
+
 
 restaurants_data = [
   {
@@ -43,10 +47,10 @@ restaurants_data = [
     },
     dishes: [
       {
-        name: "Burger",
+        name: "HalalBurger",
         description: "A delicious burger with a side of fries",
         price: 10.00,
-        image_url: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5"
+        image_url: "https://images.unsplash.com/photo-1595255669512-144851438b8b"
       }
     ]
   },
@@ -58,7 +62,7 @@ restaurants_data = [
       food_preferences: ["Italian", "Burger"],
       food_restrictions: ["Vegan", "Nut-Free"],
       number_of_reviews: 612,
-      image_url: "https://images.unsplash.com/photo-1536329639134-ade172b2fea0"
+      image_url: "https://images.unsplash.com/photo-1579751626657-72bc17010498"
     },
     restaurant_owner: {
       name: "Sophie Laurent",
@@ -68,7 +72,7 @@ restaurants_data = [
     dishes: [
       {
         name: "Gluten-Free Pizza",
-        description: "Delicious pizza with gluten-free crust",
+        description: "Delicious rice pizza with gluten-free crust",
         price: 12.99,
         image_url: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3"
       },
@@ -82,7 +86,7 @@ restaurants_data = [
   },
   {
     restaurant: {
-      name: "La Guinguette d'Angèle",
+      name: "Ohayo d'Angèle",
       address: "34 Rue Coquillière, 75001 Paris",
       rating: 4.7,
       food_preferences: ["Japanese", "Sushi"],
@@ -104,7 +108,7 @@ restaurants_data = [
       },
       {
         name: "Gluten-Free Ramen",
-        description: "Traditional ramen with gluten-free noodles",
+        description: "Porc ramen with gluten-free noodles",
         price: 13.99,
         image_url: "https://images.unsplash.com/photo-1557872943-16a5ac26437e"
       }
@@ -112,7 +116,7 @@ restaurants_data = [
   },
   {
     restaurant: {
-      name: "Jah Jah",
+      name: "Vamos Vegan",
       address: "11 Rue des Petites Écuries, 75010 Paris",
       rating: 4.6,
       food_preferences: ["BBQ", "Fast Food"],
@@ -130,7 +134,7 @@ restaurants_data = [
         name: "Vegan BBQ Plate",
         description: "Plant-based BBQ with sides",
         price: 14.99,
-        image_url: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd"
+        image_url: "https://images.unsplash.com/photo-1593708659671-595be1c95128"
       },
       {
         name: "Gluten-Free Tacos",
@@ -158,15 +162,15 @@ restaurants_data = [
     dishes: [
       {
         name: "Lactose-Free Pizza",
-        description: "Classic pizza with dairy-free cheese",
+        description: "Papperoni with dairy-free cheese",
         price: 13.99,
         image_url: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3"
       },
       {
         name: "Nut-Free Pasta",
-        description: "Fresh pasta with safe sauce",
+        description: "pasta with tomato sauce",
         price: 12.99,
-        image_url: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601"
+        image_url: "https://plus.unsplash.com/premium_photo-1677000666741-17c3c57139a2"
       }
     ]
   },
@@ -232,7 +236,7 @@ restaurants_data = [
   },
   {
     restaurant: {
-      name: "Daily Syrien Veggie",
+      name: "Mexican Veggie Express",
       address: "72 Rue du Faubourg Saint-Denis, 75010 Paris",
       rating: 4.6,
       food_preferences: ["Fast Food", "Mexican"],
@@ -250,11 +254,11 @@ restaurants_data = [
         name: "Halal Falafel Wrap",
         description: "Traditional falafel with tahini sauce",
         price: 8.99,
-        image_url: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b"
+        image_url: "https://images.unsplash.com/photo-1734772591537-15ac1b3b3c04"
       },
       {
-        name: "Vegan Shawarma",
-        description: "Plant-based shawarma with garlic sauce",
+        name: "Vegan tacos",
+        description: "Plant-based protein with garlic sauce tacos",
         price: 11.99,
         image_url: "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85"
       }
@@ -280,13 +284,13 @@ restaurants_data = [
         name: "Nut-Free Pasta Carbonara",
         description: "Classic carbonara without nuts",
         price: 14.99,
-        image_url: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601"
+        image_url: "https://images.unsplash.com/photo-1560434019-4558f9a9e2a1"
       },
       {
-        name: "Shellfish-Free Seafood Pizza",
-        description: "Pizza with safe seafood options",
+        name: "Calamari only pizza",
+        description: "Shellfish-Free Seafood Pizza",
         price: 15.99,
-        image_url: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3"
+        image_url: "https://images.unsplash.com/photo-1598206572429-f02335a5edc6"
       }
     ]
   },
@@ -310,7 +314,7 @@ restaurants_data = [
         name: "Dairy-Free Risotto",
         description: "Creamy risotto with plant-based cream",
         price: 16.99,
-        image_url: "https://images.unsplash.com/photo-1481931098730-318b6f776db0"
+        image_url: "https://images.unsplash.com/photo-1637361874063-e5e415d7bcf7"
       },
       {
         name: "Shellfish-Free BBQ Platter",
@@ -496,7 +500,7 @@ restaurants_data = [
         name: "Shellfish-Free BBQ Platter",
         description: "Mixed grill with safe meat options",
         price: 16.99,
-        image_url: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd"
+        image_url: "https://images.unsplash.com/photo-1732589306925-b26b2153a9c8"
       }
     ]
   },
@@ -526,7 +530,7 @@ restaurants_data = [
         name: "Nut-Free Chicken Burger",
         description: "Safe chicken burger",
         price: 11.99,
-        image_url: "https://images.unsplash.com/photo-1550317138-10000687a72b"
+        image_url: "https://images.unsplash.com/photo-1615297928064-24977384d0da"
       }
     ]
   },
@@ -556,19 +560,19 @@ restaurants_data = [
         name: "Halal Beef Burger",
         description: "Certified halal beef burger",
         price: 13.99,
-        image_url: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd"
+        image_url: "https://plus.unsplash.com/premium_photo-1661601722152-87143d4be5b9"
       }
     ]
   },
   {
     restaurant: {
-      name: "Chez Francis",
+      name: "Izakaya Francis",
       address: "7 Place de l'Alma, 75008 Paris",
       rating: 4.6,
       food_preferences: ["Sushi", "Japanese"],
       food_restrictions: ["Vegetarian", "Vegan", "Shellfish-Free"],
       number_of_reviews: 850,
-      image_url: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d"
+      image_url: "https://images.unsplash.com/photo-1502364271109-0a9a75a2a9df"
     },
     restaurant_owner: {
       name: "Francis Leclerc",
@@ -577,16 +581,196 @@ restaurants_data = [
     },
     dishes: [
       {
-        name: "Vegetarian Sushi Platter",
-        description: "Assorted vegetable sushi",
-        price: 16.99,
-        image_url: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351"
+        name: "Shellfish-Free Sushi Platter",
+        description: "Seasonal sushi platter without shellfish",
+        price: 22.99,
+        image_url: "https://images.unsplash.com/photo-1563612116625-3012372fccce"
       },
       {
-        name: "Shellfish-Free Ramen",
-        description: "Traditional ramen with safe ingredients",
+        name: "Frided vegetable with udon",
+        description: "Traditional hiyashi vegan udon",
         price: 14.99,
-        image_url: "https://images.unsplash.com/photo-1557872943-16a5ac26437e"
+        image_url: "https://plus.unsplash.com/premium_photo-1726880637228-52cb20f7bc7d"
+      }
+    ]
+  },
+  {
+    restaurant: {
+      name: "Healthy Dehli",
+      address: "16 Villa Gaudelet, 75011 Paris",
+      rating: 4.6,
+      food_preferences: ["Indian", "Italian"],
+      food_restrictions: ["Lactose-Free", "Vegan", "Halal"],
+      number_of_reviews: 745,
+      image_url: "https://images.unsplash.com/photo-1582228096960-7f5d2ec4aa8e"
+    },
+    restaurant_owner: {
+      name: "Morgan Garcia",
+      email: "owner1@example.com",
+      password: "password"
+    },
+    dishes: [
+      {
+        name: "Chana Masala",
+        description: "Spiced chickpeas with curry",
+        price: 11.22,
+        image_url: "https://plus.unsplash.com/premium_photo-1675727579542-ad785e1cee41"
+      },
+      {
+        name: "Indial curry vegie bowl",
+        description: "Lactose-Free, Vegan and Halal for sure",
+        price: 12.83,
+        image_url: "https://images.unsplash.com/photo-1634234498505-51b316832b28"
+      }
+    ]
+  },
+  {
+    restaurant: {
+      name: "Taste of Taiwan",
+      address: "10 Rue Saint-Maur, 75011 Paris",
+      rating: 4.3,
+      food_preferences: ["Chinese", "Sushi"],
+      food_restrictions: ["Lactose-Free", "Vegan", "Halal"],
+      number_of_reviews: 569,
+      image_url: "https://images.unsplash.com/photo-1670404160617-8ca76c8cc2be"
+    },
+    restaurant_owner: {
+      name: "Jordan Chen",
+      email: "owner2@example.com",
+      password: "password"
+    },
+    dishes: [
+      {
+        name: "Fried Rice",
+        description: "Stir-fried rice with vegetables and eggs",
+        price: 11.94,
+        image_url: "https://images.unsplash.com/photo-1615322813057-1ebfffa553a9"
+      },
+      {
+        name: "Mapo Tofu",
+        description: "Spicy tofu dish with chili and bean paste",
+        price: 10.16,
+        image_url: "https://images.unsplash.com/photo-1573470571028-a0ca7a723959"
+      }
+    ]
+  },
+  {
+    restaurant: {
+      name: "Maji Maji Kyoto",
+      address: "8 Rue de la Folie Méricourt, 75011 Paris",
+      rating: 4.5,
+      food_preferences: ["Japanese", "BBQ"],
+      food_restrictions: ["Lactose-Free", "Gluten-Free", "Nut-Free"],
+      number_of_reviews: 873,
+      image_url: "https://images.unsplash.com/photo-1629684782790-385ed5adb497"
+    },
+    restaurant_owner: {
+      name: "Cameron Lopez",
+      email: "owner3@example.com",
+      password: "password"
+    },
+    dishes: [
+      {
+        name: "Yakinuku teishouku",
+        description: "Gluten free yakinuku set",
+        price: 14.14,
+        image_url: "https://images.unsplash.com/photo-1663569820326-fece03afdf1c"
+      },
+      {
+        name: "Duck braised with soba",
+        description: "Brothy noodle soup",
+        price: 14.03,
+        image_url: "https://images.unsplash.com/photo-1496114212242-bac8bd9de53d"
+      }
+    ]
+  },
+  {
+    restaurant: {
+      name: "Nihao 886",
+      address: "21 Rue Moret, 75011 Paris",
+      rating: 4.5,
+      food_preferences: ["Chinese", "Burger"],
+      food_restrictions: ["Vegan", "Lactose-Free", "Halal"],
+      number_of_reviews: 720,
+      image_url: "https://images.unsplash.com/photo-1571091718767-18b5b1457add"
+    },
+    restaurant_owner: {
+      name: "Jordan Patel",
+      email: "owner4@example.com",
+      password: "password"
+    },
+    dishes: [
+      {
+        name: "Sweet sour chicken with pad thai",
+        description: "Stir-fried chicken halal and lactose free",
+        price: 14.46,
+        image_url: "https://images.unsplash.com/photo-1623689048105-a17b1e1936b8"
+      },
+      {
+        name: "Hot pot set with tofu and vegetables",
+        description: "Hot pot set for 2 people",
+        price: 32.55,
+        image_url: "https://images.unsplash.com/photo-1614104030967-5ca61a54247b"
+      }
+    ]
+  },
+  {
+    restaurant: {
+      name: "Guacamonamour",
+      address: "3 Cité Griset, 75011 Paris",
+      rating: 4.7,
+      food_preferences: ["Mexican", "Fast Food"],
+      food_restrictions: ["Gluten-Free", "Vegan", "Egg-Free"],
+      number_of_reviews: 532,
+      image_url: "https://plus.unsplash.com/premium_photo-1681406689584-2f7612fa98a4"
+    },
+    restaurant_owner: {
+      name: "Casey Kim",
+      email: "owner7@example.com",
+      password: "password"
+    },
+    dishes: [
+      {
+        name: "Tacos with chickpeas",
+        description: "Soft corn tortillas with veggie filling",
+        price: 15.41,
+        image_url: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47"
+      },
+      {
+        name: "Vegan Burrito",
+        description: "Rice, beans, veggies, and guac",
+        price: 15.08,
+        image_url: "https://images.unsplash.com/photo-1629122850744-28e6baa5d4d8"
+      }
+    ]
+  },
+  {
+    restaurant: {
+      name: "Kokoro Naka",
+      address: "13 Rue Sedaine, 75011 Paris",
+      rating: 4.4,
+      food_preferences: ["Japanese", "Pizza"],
+      food_restrictions: ["Lactose-Free", "Gluten-Free", "Vegetarian"],
+      number_of_reviews: 457,
+      image_url: "https://images.unsplash.com/photo-1601351841251-766245326eee"
+    },
+    restaurant_owner: {
+      name: "Casey Kim",
+      email: "owner13@example.com",
+      password: "password"
+    },
+    dishes: [
+      {
+        name: "Seasonal Vegan Sushi",
+        description: "Sushi rolls with cucumber, avocado",
+        price: 14.02,
+        image_url: "https://images.unsplash.com/photo-1557395714-5177be073e2b"
+      },
+      {
+        name: "Curry rice with vegetable croquette",
+        description: "Vegetarian Gluten-Free curry rice",
+        price: 10.75,
+        image_url: "https://images.unsplash.com/photo-1695977723082-dcf5ebbead9a"
       }
     ]
   }
@@ -610,3 +794,107 @@ restaurants_data.each do |restaurant_data|
     dish.save
   end
 end
+
+experiences_data = [
+  {
+    name: "Parisian Food Tour",
+    description: "Explore the hidden gems of Parisian cuisine with a local guide",
+    price: 89,
+    rating: 4.5,
+    number_of_reviews: 156,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+  },
+  {
+    name: "Wine Tasting in Montmartre",
+    description: "Discover French wines in a charming Montmartre cellar",
+    price: 65,
+    rating: 4.9,
+    number_of_reviews: 89,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3"
+  },
+  {
+    name: "Macaron Making Class",
+    description: "Learn to make authentic French macarons from a pastry chef",
+    price: 75,
+    rating: 4.7,
+    number_of_reviews: 42,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1558326567-98ae2405596b"
+  },
+  {
+    name: "Seine River Dinner Cruise",
+    description: "Enjoy a gourmet dinner while cruising the Seine",
+    price: 120,
+    rating: 4.6,
+    number_of_reviews: 234,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1549918864-48ac978761a4"
+  },
+  {
+    name: "Cheese and Wine Pairing",
+    description: "Learn about French cheeses and their perfect wine matches",
+    price: 55,
+    rating: 4.9,
+    number_of_reviews: 167,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd"
+  },
+  {
+    name: "Boulangerie Workshop",
+    description: "Master the art of French bread making",
+    price: 70,
+    rating: 4.8,
+    number_of_reviews: 98,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1509440159596-0249088772ff"
+  },
+  {
+    name: "Chocolate Making Experience",
+    description: "Create your own French chocolates with a master chocolatier",
+    price: 85,
+    rating: 4.7,
+    number_of_reviews: 145,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c"
+  },
+  {
+    name: "Market Tour & Cooking Class",
+    description: "Shop at a local market and cook with fresh ingredients",
+    price: 95,
+    rating: 4.9,
+    number_of_reviews: 178,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1556911220-bff31c812dba"
+  },
+  {
+    name: "Cocktail Mixology Class",
+    description: "Learn to make French-inspired cocktails",
+    price: 60,
+    rating: 4.6,
+    number_of_reviews: 89,
+    categories: ["Food", "Culture"],
+    image_url: "https://images.unsplash.com/photo-1551538827-9c037cb4f32a"
+  },
+  {
+    name: "Food Photography Workshop",
+    description: "Learn to capture the beauty of French cuisine",
+    price: 80,
+    rating: 4.7,
+    number_of_reviews: 67,
+    categories: ["Food", "Art"],
+    image_url: "https://images.unsplash.com/photo-1490645935967-10de6ba17061"
+  }
+]
+
+experiences_data.each do |experience_data|
+  puts "Creating experience: #{experience_data[:name]} - #{experiences_data.index(experience_data) + 1}/#{experiences_data.length}"
+
+  image_url = experience_data.delete(:image_url)
+  experience = Experience.new(experience_data)
+  attach_image_from_url(experience, image_url)
+  experience.save
+end
+
+puts "Created #{Experience.count} experiences"

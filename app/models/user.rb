@@ -6,4 +6,9 @@ class User < ApplicationRecord
 
   has_many :bookings, dependent: :destroy
   has_many :reserved_restaurants, through: :bookings, source: :restaurant
+
+  enum mode: {
+    normal: "restaurant",
+    experience: "experience"
+  }
 end

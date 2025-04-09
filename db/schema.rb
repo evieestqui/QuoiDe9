@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_04_07_095138) do
+ActiveRecord::Schema[7.1].define(version: 2025_04_09_122603) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -69,6 +69,20 @@ ActiveRecord::Schema[7.1].define(version: 2025_04_07_095138) do
     t.index ["restaurant_id"], name: "index_dishes_on_restaurant_id"
   end
 
+  create_table "experiences", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.float "rating"
+    t.integer "number_of_reviews"
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
+    t.integer "price"
+    t.string "categories", default: [], array: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "restaurant_owners", force: :cascade do |t|
     t.string "name"
     t.string "email", default: "", null: false
@@ -106,6 +120,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_04_07_095138) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "mode"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
