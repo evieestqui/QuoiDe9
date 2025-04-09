@@ -43,3 +43,31 @@
     <% end %>
   </div>
 </div>
+
+<div class="container mx-auto px-4 py-2">
+  <div class="mt-8">
+    <h3 class="text-lg font-semibold mb-4">Other Experiences You May Like</h3>
+    <div class="space-y-4">
+      <% @other_experiences.each do |experience| %>
+        <%= link_to experience_path(experience, experience_category: params[:experience_category], address: params[:address]) do %>
+        <div class="flex justify-between items-start">
+          <div class="flex gap-4">
+            <% if experience.photo.attached? %>
+              <%= cl_image_tag experience.photo.key, class: "w-24 h-24 object-cover rounded-lg", width: 200, height: 200 %>
+            <% end %>
+            <div>
+              <h4 class="font-medium"><%= experience.name %></h4>
+              <p class="text-gray-600 text-sm"><%= experience.address %></p>
+              <div class="flex items-center gap-2 text-sm">
+                <span class="text-gray-600">⭐ <%= experience.rating %></span>
+                <span class="mx-2">•</span>
+                <span class="text-gray-600"><%= experience.number_of_reviews %> reviews</span>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

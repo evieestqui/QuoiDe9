@@ -31,8 +31,8 @@ class ExperiencesController < ApplicationController
 
     query = Experience.all.where.not(id: @experience.id)
 
-    if params[:food_preferences].present?
-      query = query.where("food_preferences @> ARRAY[?]::varchar[]", params[:food_preferences])
+    if params[:experience_category].present?
+      query = query.where("categories @> ARRAY[?]::varchar[]", params[:experience_category])
     end
 
     @other_experiences = query.order(Arel.sql("RANDOM() * extract(epoch from now())::integer")).first(3)

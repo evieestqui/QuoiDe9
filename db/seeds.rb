@@ -966,6 +966,15 @@ experiences_data = [
     number_of_reviews: 81,
     categories: ["Sports", "Nature"],
     image_url: "https://images.unsplash.com/photo-1550620224-150e0de822ff"
+  },
+  {
+    name: "Off roading in the Parisian countryside",
+    description: "Embark on an exhilarating off-road adventure through the picturesque French countryside",
+    price: 50,
+    rating: 4.8,
+    number_of_reviews: 90,
+    categories: ["Sports", "Nature"],
+    image_url: "https://images.unsplash.com/photo-1566760749534-c1778fd72b1c"
   }
 ]
 
