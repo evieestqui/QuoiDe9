@@ -973,7 +973,7 @@ experiences_data = [
     price: 50,
     rating: 4.8,
     number_of_reviews: 90,
-    categories: ["Sports", "Nature"],
+    categories: ["Sports", "Nature", "Adventure"],
     image_url: "https://images.unsplash.com/photo-1566760749534-c1778fd72b1c"
   }
 ]
