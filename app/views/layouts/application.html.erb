@@ -8,7 +8,7 @@
     <%= tag.link rel: "icon", href: image_url("app-icon-512.png"), type: "image/png" %>
     <%= tag.link rel: "apple-touch-icon", href: image_url("app-icon-512.png") %>
 
-<%= csrf_meta_tags %>
+    <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
@@ -19,7 +19,5 @@
 
   <body class="flex flex-col min-h-screen">
     <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
   </body>
 </html>
