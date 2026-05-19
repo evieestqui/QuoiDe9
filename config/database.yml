@@ -79,6 +79,4 @@ test:
 #
 production:
   <<: *default
-  database: quoi_de9_production
-  username: quoi_de9
-  password: <%= ENV["QUOI_DE9_DATABASE_PASSWORD"] %>
+  password: <%= ENV["DATABASE_URL"] %>
